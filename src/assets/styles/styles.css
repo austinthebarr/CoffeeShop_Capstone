@@ -9,3 +9,11 @@
   display: block;
 }
 
+.bodyStyles {
+ background-color: #F5F5F5;
+ height: 100vh;
+}
+
+.formStyles {
+  margin-top: 15%;
+}

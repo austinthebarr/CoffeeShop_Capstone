@@ -7,12 +7,15 @@ import AddToMenu from './AddToMenu';
 
 const App = () => {
   return (
-  
-    <Switch>
-      <Route exact path='/' render={() => <Splash/>} />
-      <Route path='/InventoyForm' render={() => <AddToInventory/>} />
-      <Route path='/MenuForm' render={() => <AddToMenu/>} />
-    </Switch>
+    <div className='bodyStyles'> 
+      <Switch>
+     
+        <Route exact path='/' render={() => <Splash/>} />
+        <Route path='/InventoyForm' render={() => <AddToInventory/>} />
+        <Route path='/MenuForm' render={() => <AddToMenu/>} />
+      
+      </Switch>
+    </div>
   );
 };
 
