@@ -6,17 +6,19 @@ import NavBar from './NavBar';
 
 const Pos = () => {
   return(
-    <div> 
-      <div className='row col-md-12'>
-        <div className='col-md-8'>
-          <Menu />
+    <div className='position'> 
+      <div className='row'>
+        <div className='col-md-8 paddingColRight'> 
+          <div className='menuStyles'>
+            <Menu /> 
+          </div> 
+          <div >
+            <NavBar />
+          </div>
         </div>
-        <div className='col-md-4'>
+        <div className='col-md-4 paddingColLeft'>
           <CurrentSale />
         </div>
-      </div>
-      <div className='row col-md-12'>
-        <NavBar />
       </div>
     </div>
   );

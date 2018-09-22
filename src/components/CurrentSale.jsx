@@ -1,7 +1,16 @@
 import React from 'react';
 
 const CurrentSale = () => {
-  return(<h1>test</h1>);
+  return(
+    <div>
+      <nav className="navbar navbar-dark bg-dark headerStyles">
+      Current Sale:
+      </nav>
+      <div className=''>
+
+      </div>
+    </div>
+  );
 };
 
 export default CurrentSale;
