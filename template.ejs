@@ -2,10 +2,12 @@
 <head>
   <meta charset="utf-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
+  
 </head>
   <body>
     <% if (htmlWebpackPlugin.options.appMountId) { %>
       <div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
     <% } %>
+    <style>@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');</style>
   </body>
 </html>

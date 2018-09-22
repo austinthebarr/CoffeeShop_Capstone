@@ -3,7 +3,7 @@ import Header from './Header';
 
 const AddToInventory = () => {
   return (
-    <div><Header /></div>
+    <div><Header name='Add to Inventory'/></div>
   );
 };
 

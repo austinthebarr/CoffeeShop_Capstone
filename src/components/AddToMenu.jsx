@@ -3,7 +3,7 @@ import Header from './Header';
 
 const AddToMenu = () => {
   return (
-    <div><Header /></div>
+    <div><Header name='Add to Menu'/></div>
   );
 };
 

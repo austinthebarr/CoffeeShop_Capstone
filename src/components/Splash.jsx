@@ -5,7 +5,7 @@ import Header from './Header';
 const Splash = () => {
   return (
     <div>
-      <Header />
+      <Header name='Welcome to CoffeeShop!' />
     </div>
   );
 };
