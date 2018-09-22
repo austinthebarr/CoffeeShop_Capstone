@@ -2,13 +2,13 @@ import React from 'react';
 
 const CurrentSale = () => {
   return(
-    <div>
+    <div className='borderControl'>
       <nav className="navbar navbar-dark bg-dark headerStyles">
       Current Sale:
       </nav>
-      <div className=''>
-
-      </div>
+      <div className='cartList'>
+       </div>
+       <button className='btn-primary checkoutButton'>Checkout</button>
     </div>
   );
 };
