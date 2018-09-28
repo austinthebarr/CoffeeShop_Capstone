@@ -1,5 +1,5 @@
 {
-  "name": "react-help-queue",
+  "name": "CoffeeShop",
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
@@ -21,7 +21,7 @@
     "react-router-dom": "^4.0.0",
     "redux": "^3.7.2",
     "styled-jsx": "^3.0.2",
-    "uuid": "^3.2.1"
+    "lint-fix": "^0.24.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -38,6 +38,8 @@
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.5.0",
     "style-loader": "^0.23.0",
-    "css-loader": "^1.0.0"
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.6",
+    "url-loader": "^0.6.2"
   }
 }

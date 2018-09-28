@@ -1,16 +1,17 @@
 import React from 'react';
-import Stock from './../assets/images/stock.jpg';
+import stock from './../assets/images/stock.jpg';
 
 const Item = () => {
   var cardInline = {
-    width:'18rem',
+    width:'11rem',
+    height:'11rem',
+    padding: '10px 10px',
+    marginRight: '10px'
   };
   return(
     <div className="card" style={cardInline}>
-
-      <img className="card-img-top" src={Stock}/>
-      <h5 className="card-title">Card title</h5>
-      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <img className="card-img-top" src={stock}></img>
+      <h5 className="card-title">Espresso</h5>
     </div>
   );
 };
