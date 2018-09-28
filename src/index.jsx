@@ -10,8 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/styles.css';
 
 const store = createStore(rootReducer);
-
-
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+);
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>

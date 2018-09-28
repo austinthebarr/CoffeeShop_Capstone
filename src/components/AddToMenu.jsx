@@ -21,9 +21,8 @@ const AddToMenu = ({ dispatch }) => {
           <div className="form-group">
             <label>Add Drink:</label>
             <input
-              type="item" 
               className="form-control" 
-              id="item" aria-describedby="item" 
+              aria-describedby="item" 
               placeholder="Enter New Drink"
               ref={node => {
                 input = node;

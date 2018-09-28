@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import DrinkReducer from './DrinkReducer';
 
 const rootReducer = combineReducers({
-  drink: DrinkReducer
+  drinks: DrinkReducer
 });
 
 export default rootReducer;
