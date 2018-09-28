@@ -74,6 +74,12 @@
   min-height: 100vh;
 }
 
-#sidebar.active {
-  margin-left: -250px;
+
+.hide {
+  display: none;
+}
+
+.show {
+  z-index: 1;
+
 }

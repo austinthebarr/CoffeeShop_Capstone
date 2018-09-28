@@ -1,30 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const SideBarNav = () => {
+const SideBarNav = (props) => {
+
   return(
-    <div className="wrapper">
+    <div onClick={props.handleHidingToggleSideBar} className="wrapper">
       <nav id="sidebar">
         <div className="sidebar-header">
-          <h3>Bootstrap Sidebar</h3>
+          <h3>Add</h3>
         </div>
 
         <ul className="list-unstyled components">
-          <p>Dummy Heading</p>
-          <li className="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Home</a>
+          <li>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to='/InventoyForm'>Add Item to Inventoy</Link>
           </li>
           <li>
-            <a href="#">Portfolio</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
+            <Link to='/MenuForm'>Add Item to Menu</Link>
           </li>
         </ul>
       </nav>
     </div>    );
+};
+
+PropTypes.SideBarNav = {
+  handleHidingToggleSideBar: PropTypes.func.isRequired
 };
 
 export default SideBarNav;

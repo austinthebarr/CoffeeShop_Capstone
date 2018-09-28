@@ -6,7 +6,7 @@ const NavBar = (props) => {
   return(
     <div>
       <nav className="navbar navbar-dark bg-dark navBar">
-        <li onClick={() => props.handleShowToggleSideBar}>Plus</li>  
+        <li onClick={props.handleShowToggleSideBar}>Plus</li>  
         <li>Menu</li>
         <li>Inventory</li>
       </nav>
@@ -16,6 +16,6 @@ const NavBar = (props) => {
 
 NavBar.propTypes = {
   handleShowToggleSideBar: PropTypes.func.isRequired
-}
+};
 
 export default NavBar;
