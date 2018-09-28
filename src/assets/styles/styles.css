@@ -39,7 +39,7 @@
 }
 
 .menuStyles {
-  height:88vh;
+  height:89vh;
 }
 
 .postion {
@@ -47,7 +47,7 @@
 }
 
 .cartList {
-  height:76vh;
+  height:78vh;
 }
 
 .checkoutButton {
@@ -66,6 +66,7 @@
 .wrapper {
   display: flex;
   align-items: stretch;
+  padding-right: -15px;
 }
 
 #sidebar {
@@ -81,5 +82,6 @@
 
 .show {
   z-index: 1;
-
+  width:100px;
+  background:black;
 }

@@ -28,7 +28,7 @@ class Pos extends Component {
 
   show(){
     if(this.state.toggleSideBar){
-      return 'show';
+      return 'show col-md-4';
     } else {
       return 'hide';
     }
@@ -38,9 +38,9 @@ class Pos extends Component {
     return(
       
       <div className='position'>
-        <div className={this.show()}><SideBarNav handleHidingToggleSideBar = {this.onHidingToggleSideBar} /></div> 
         <div className='row'>
-          <div className='col-md-8 paddingColRight'> 
+        <div className={this.show()}><SideBarNav handleHidingToggleSideBar = {this.onHidingToggleSideBar} /></div>
+          <div className='col-md-8 paddingColRight paddingColLeft '> 
             <div className='menuStyles'>
               <Menu /> 
             </div> 

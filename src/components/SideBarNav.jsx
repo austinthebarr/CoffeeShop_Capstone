@@ -26,7 +26,7 @@ const SideBarNav = (props) => {
     </div>    );
 };
 
-PropTypes.SideBarNav = {
+SideBarNav.propTypes = {
   handleHidingToggleSideBar: PropTypes.func.isRequired
 };
 
