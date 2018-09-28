@@ -7,8 +7,8 @@ const CurrentSale = () => {
       Current Sale:
       </nav>
       <div className='cartList'>
-       </div>
-       <button className='btn-primary checkoutButton'>Checkout</button>
+      </div>
+      <button className='btn-primary checkoutButton'>Checkout</button>
     </div>
   );
 };
