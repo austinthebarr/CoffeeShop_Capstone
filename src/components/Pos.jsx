@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Menu from './Menu';
 import Inventory from './Inventory';
@@ -74,7 +76,7 @@ class Pos extends Component {
           </div>
           <div className='col-md-8 paddingColRight paddingColLeft '> 
             <div className={this.showMenu()}>
-              <Menu /> 
+              <Menu drinkList={this.props.drinksList}/> 
             </div> 
             <div className={this.showInventory()}>
               <Inventory /> 
@@ -95,4 +97,15 @@ class Pos extends Component {
   } 
 }
 
-export default Pos;
+
+Pos.propTypes = {
+  drinksList: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    drinksList: state.drinks
+  };
+};
+
+export default connect((mapStateToProps)(Pos));

@@ -17,6 +17,7 @@ const AddToMenu = ({ dispatch }) => {
             if(!input.value.trim()){
               return;
             } dispatch(addDrink(input.value.trim()));
+            input.value = '';
           }} className='col-md-6 formStyles'>     
           <div className="form-group">
             <label>Add Drink:</label>
