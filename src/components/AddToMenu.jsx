@@ -1,16 +1,33 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addDrink } from './../actions/index';
+
 import Header from './Header';
 
-const AddToMenu = () => {
+const AddToMenu = ({ dispatch }) => {
+  let input;
   return (
     <div>
       <Header name='Add to Menu'/>
       <div className='row'> 
         <div className='col-md-3'></div>
-        <form className='col-md-6 formStyles'>     
+        <form 
+          onSubmit={e => {e.preventDefault(); 
+            if(!input.value.trim()){
+              return;
+            } dispatch(addDrink(input.value.trim()));
+          }} className='col-md-6 formStyles'>     
           <div className="form-group">
             <label>Add Drink:</label>
-            <input type="item" className="form-control" id="item" aria-describedby="item" placeholder="Enter New Drink"></input>
+            <input
+              type="item" 
+              className="form-control" 
+              id="item" aria-describedby="item" 
+              placeholder="Enter New Drink"
+              ref={node => {
+                input = node;
+              }}></input>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
@@ -19,5 +36,8 @@ const AddToMenu = () => {
     </div>
   );
 };
+AddToMenu.propTypes = {
+  dispatch: PropTypes.func
+};
 
-export default AddToMenu;
+export default connect()(AddToMenu);
