@@ -11,7 +11,7 @@ const Item = (props) => {
     marginRight: '10px'
   };
   return(
-    <div className="card" style={cardInline}>
+    <div className="card" style={cardInline} onClick={(event) => console.log(event.target)}>
       <img className="card-img-top" src={stock}></img>
       <h5 className="card-title">{props.drinkName}</h5>
     </div>
@@ -19,7 +19,7 @@ const Item = (props) => {
 };
 
 Item.propTypes = {
-  drinkName: PropTypes.Object
+  drinkName: PropTypes.string,
 };
 
 export default Item;

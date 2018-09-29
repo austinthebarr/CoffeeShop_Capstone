@@ -2,7 +2,16 @@ import constants from './../constants';
 const { types } = constants;
 import { v4 } from 'uuid';
 
-const DrinkReducer = (state = {1:{drinkName: espresso}}, action) => {
+const initialState = {
+  1: {
+    drinkName: 'espresso'
+  },
+
+  2: {
+    drinkName: 'latte'
+  }
+};
+const DrinkReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
   case types.ADD_DRINK: {

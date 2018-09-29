@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import Item from './Item';
 
 const Menu = (props) => {
+  return(
+    <div className='cardFlex'>
  
-  {Object.keys(props.drinkList).map(function(drinkId){
-    var drink = props.drinkList[drinkId];
-    return( 
-      <div key={drinkId} className='cardFlex'>
-        <Item
-          drinkName={drink.drinkName}
-          key={drinkId}
-        />
-      </div>);
-  });}
-  
+      {Object.keys(props.drinkList).map((drink, i) => {
+        return(
+          <Item
+            drinkName={props.drinkList[drink].drinkName}
+            key={drink}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
 Menu.propTypes = {
