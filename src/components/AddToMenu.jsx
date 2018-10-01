@@ -15,9 +15,11 @@ const AddToMenu = ({ dispatch }) => {
         <div className='col-md-3'></div>
         <form 
           onSubmit={e => {e.preventDefault(); 
-            if(!drinkName.value.trim() || priceOfDrink.value.trim()){
+            if(!drinkName.value.trim() || !priceOfDrink.value){
               return;
-            } dispatch(addDrink(drinkName.value.trim(), priceOfDrink.value.trim()));
+            } 
+            console.log(priceOfDrink.value);
+            dispatch(addDrink(drinkName.value.trim(), priceOfDrink.value));
             drinkName.value = '';
           }} className='col-md-6 formStyles'>     
           <div className="form-group">
@@ -33,7 +35,6 @@ const AddToMenu = ({ dispatch }) => {
               className="form-control" 
               aria-describedby="item" 
               placeholder="Enter Price"
-              type="number"
               ref={node => {
                 priceOfDrink = node;
               }}></input>
