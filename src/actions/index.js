@@ -1,6 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
-export const addDrink = (drinkName) => ({
+export const addDrink = (drinkName, drinkPrice) => ({
   type: types.ADD_DRINK,
-  drinkName
+  drinkName,
+  drinkPrice,
 });

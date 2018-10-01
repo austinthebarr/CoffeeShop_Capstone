@@ -4,11 +4,15 @@ import { v4 } from 'uuid';
 
 const initialState = {
   1: {
-    drinkName: 'espresso'
+    drinkName: 'espresso',
+    price: 3.50,
+    ingriedients: [],
   },
 
   2: {
-    drinkName: 'latte'
+    drinkName: 'latte',
+    price: 3.50,
+    ingriedients: [],
   }
 };
 const DrinkReducer = (state = initialState, action) => {
@@ -17,6 +21,8 @@ const DrinkReducer = (state = initialState, action) => {
   case types.ADD_DRINK: {
     let newDrinkEntered = {
       drinkName: action.drinkName,
+      price: action.price,
+      ingriedients: [],
     };
     newState = Object.assign({}, state,{[v4()]: newDrinkEntered});
     return newState;

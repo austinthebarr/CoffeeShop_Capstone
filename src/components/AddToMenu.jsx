@@ -6,7 +6,8 @@ import { addDrink } from './../actions/index';
 import Header from './Header';
 
 const AddToMenu = ({ dispatch }) => {
-  let input;
+  let drinkName;
+  let priceOfDrink;
   return (
     <div>
       <Header name='Add to Menu'/>
@@ -14,10 +15,10 @@ const AddToMenu = ({ dispatch }) => {
         <div className='col-md-3'></div>
         <form 
           onSubmit={e => {e.preventDefault(); 
-            if(!input.value.trim()){
+            if(!drinkName.value.trim() || priceOfDrink.value.trim()){
               return;
-            } dispatch(addDrink(input.value.trim()));
-            input.value = '';
+            } dispatch(addDrink(drinkName.value.trim(), priceOfDrink.value.trim()));
+            drinkName.value = '';
           }} className='col-md-6 formStyles'>     
           <div className="form-group">
             <label>Add Drink:</label>
@@ -26,7 +27,15 @@ const AddToMenu = ({ dispatch }) => {
               aria-describedby="item" 
               placeholder="Enter New Drink"
               ref={node => {
-                input = node;
+                drinkName = node;
+              }}></input>
+            <input
+              className="form-control" 
+              aria-describedby="item" 
+              placeholder="Enter Price"
+              type="number"
+              ref={node => {
+                priceOfDrink = node;
               }}></input>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
