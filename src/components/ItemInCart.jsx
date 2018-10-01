@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const ItemInCart = (props) => {
   return(
-    <div>
-      <span class="badge badge-primary">{props.Item}</span>
+    <div className='centerItem'>
+      <span className="badge badge-primary itemName">{props.Item}</span>
     </div>);
 };
 ItemInCart.propTypes = {
