@@ -24,14 +24,9 @@ const Menu = (props) => {
 
 Menu.propTypes = {
   drinkList: PropTypes.object,
-  drinksInCart: PropTypes.object
+  drinksInCart: PropTypes.object,
+  dispatch: PropTypes.func
 };
-
-// const mapStateToProps = state => {
-//   return {
-//     drinksInCart: state.cart
-//   };
-// };
 
 
 export default connect()(Menu);

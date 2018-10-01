@@ -76,7 +76,8 @@ class Pos extends Component {
           </div>
           <div className='col-md-8 paddingColRight paddingColLeft '> 
             <div className={this.showMenu()}>
-              <Menu drinkList={this.props.drinksList}/> 
+              <Menu 
+                drinkList={this.props.drinksList}/> 
             </div> 
             <div className={this.showInventory()}>
               <Inventory /> 
@@ -88,7 +89,8 @@ class Pos extends Component {
           </div>
           
           <div className='col-md-4 paddingColLeft'>
-            <CurrentSale />
+            <CurrentSale 
+              cartList = {this.props.cartList}/>
           </div>
         </div>
       </div>
@@ -99,12 +101,14 @@ class Pos extends Component {
 
 
 Pos.propTypes = {
-  drinksList: PropTypes.object
+  drinksList: PropTypes.object,
+  cartList: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
-    drinksList: state.drinks
+    drinksList: state.drinks,
+    cartList: state.cart
   };
 };
 
