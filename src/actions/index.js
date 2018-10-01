@@ -5,3 +5,9 @@ export const addDrink = (drinkName, drinkPrice) => ({
   drinkName,
   drinkPrice,
 });
+
+export const addToCart = (drink, drinkId) => ({
+  type: types.ADD_TO_CART,
+  drink,
+  drinkId,
+});

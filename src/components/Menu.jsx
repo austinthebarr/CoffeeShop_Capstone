@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
 import Item from './Item';
+import { addToCart } from './../actions/index';
 
 const Menu = (props) => {
   return(
@@ -9,10 +10,12 @@ const Menu = (props) => {
  
       {Object.keys(props.drinkList).map((drink, i) => {
         return(
-          <Item
-            drinkName={props.drinkList[drink].drinkName}
-            key={drink}
-          />
+          <div key ={i} onClick={() => props.dispatch(addToCart(props.drinkList[drink], drink))}>
+            <Item
+              drinkName={props.drinkList[drink].drinkName}
+              key={i}
+            />
+          </div>
         );
       })}
     </div>
@@ -20,7 +23,15 @@ const Menu = (props) => {
 };
 
 Menu.propTypes = {
-  drinkList: PropTypes.object
+  drinkList: PropTypes.object,
+  drinksInCart: PropTypes.object
 };
 
-export default Menu;
+// const mapStateToProps = state => {
+//   return {
+//     drinksInCart: state.cart
+//   };
+// };
+
+
+export default connect()(Menu);
