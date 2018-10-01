@@ -18,9 +18,9 @@ const AddToMenu = ({ dispatch }) => {
             if(!drinkName.value.trim() || !priceOfDrink.value){
               return;
             } 
-            console.log(priceOfDrink.value);
             dispatch(addDrink(drinkName.value.trim(), priceOfDrink.value));
             drinkName.value = '';
+            priceOfDrink.value = '';
           }} className='col-md-6 formStyles'>     
           <div className="form-group">
             <label>Add Drink:</label>
@@ -35,6 +35,7 @@ const AddToMenu = ({ dispatch }) => {
               className="form-control" 
               aria-describedby="item" 
               placeholder="Enter Price"
+              type="number" min="0.01" step="0.01" max="2500"
               ref={node => {
                 priceOfDrink = node;
               }}></input>

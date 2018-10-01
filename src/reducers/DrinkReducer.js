@@ -17,12 +17,11 @@ const initialState = {
 };
 const DrinkReducer = (state = initialState, action) => {
   let newState;
-  console.log(action);
   switch (action.type) {
   case types.ADD_DRINK: {
     let newDrinkEntered = {
       drinkName: action.drinkName,
-      price: parseInt(action.drinkPrice),
+      price: parseFloat(action.drinkPrice),
       ingriedients: [],
     };
     newState = Object.assign({}, state,{[v4()]: newDrinkEntered});
