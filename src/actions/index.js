@@ -11,3 +11,12 @@ export const addToCart = (drink, drinkId) => ({
   drink,
   drinkId,
 });
+
+export const checkout = () => ({
+  type: types.CHECKOUT,
+});
+
+export const deleteItem = (id) => ({
+  type: types.DELETE_ITEM,
+  id,
+});

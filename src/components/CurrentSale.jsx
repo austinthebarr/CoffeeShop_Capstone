@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { checkout } from './../actions/index';
+import { deleteItem } from './../actions/index';
 
 import ItemInCart from './ItemInCart';
 
@@ -12,24 +15,26 @@ const CurrentSale = (props) => {
       </nav>
       <div className='cartList'>
         {Object.keys(props.cartList).map((item)=> { 
-          console.log(price);
           price += (props.cartList[item].drink.price);
           return(
+            <div key={item} onClick={() => props.dispatch(deleteItem(item))}>
             <ItemInCart 
               Item={props.cartList[item].drink.drinkName}
-              key={item}/>);  
+              key={item}/> 
+             </div> ); 
         })}
       </div>
       <div>
         <h3>Total: ${price}</h3>
       </div>
-      <button className='btn-primary checkoutButton'>Checkout</button>
+      <button onClick={() => props.dispatch(checkout())} className='btn-primary checkoutButton'>Checkout</button>
     </div>
   );
 };
 
 CurrentSale.propTypes = {
-  cartList: PropTypes.object
+  cartList: PropTypes.object,
+  dispatch: PropTypes.func
 };
 
-export default CurrentSale;
+export default connect()(CurrentSale);

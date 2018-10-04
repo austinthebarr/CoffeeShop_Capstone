@@ -13,6 +13,26 @@ const CartReducer = (state = {}, action) => {
     newState = Object.assign({}, state, {[v4()]:clickedDrink});
     return newState;
   }
+  
+  case types.CHECKOUT: {
+    newState = {};
+    return newState;
+  }
+  case types.DELETE_ITEM: {
+    const removeProperty = (obj, property) => {
+      for(let key in obj){
+        var item = obj[key];
+        if(property !== key){
+          newState = Object.assign({}, newState, {[key]:item});
+        } 
+      }
+      if(newState === undefined){
+        return newState = {};
+      } 
+      return newState;
+    };
+    return removeProperty(state, action.id);
+  }
   default:
     return state;
   }
