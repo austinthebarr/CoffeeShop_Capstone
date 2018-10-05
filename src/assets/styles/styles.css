@@ -104,6 +104,9 @@
   margin-top: 6px;
 }
 
+.itemName:hover {
+  background-color: red;
+}
 .centerItem {
   text-align: center
 }

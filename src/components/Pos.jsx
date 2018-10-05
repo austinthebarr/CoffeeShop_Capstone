@@ -40,6 +40,7 @@ class Pos extends Component {
     this.setState({toggleMenu: false});
   }
 
+
   showSideBar(){
     if(this.state.toggleSideBar){
       return 'show col-md-4';
@@ -90,7 +91,9 @@ class Pos extends Component {
           
           <div className='col-md-4 paddingColLeft'>
             <CurrentSale 
-              cartList = {this.props.cartList}/>
+              cartList = {this.props.cartList}
+              handleToggleDelete = {this.onDeletingItem}
+              handleToggleNotDelete = {this.onNotDeletingItem}/>
           </div>
         </div>
       </div>

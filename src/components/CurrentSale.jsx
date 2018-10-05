@@ -18,10 +18,10 @@ const CurrentSale = (props) => {
           price += (props.cartList[item].drink.price);
           return(
             <div key={item} onClick={() => props.dispatch(deleteItem(item))}>
-            <ItemInCart 
-              Item={props.cartList[item].drink.drinkName}
-              key={item}/> 
-             </div> ); 
+              <ItemInCart 
+                Item={props.cartList[item].drink.drinkName}
+                key={item}/> 
+            </div> ); 
         })}
       </div>
       <div>
@@ -34,7 +34,9 @@ const CurrentSale = (props) => {
 
 CurrentSale.propTypes = {
   cartList: PropTypes.object,
-  dispatch: PropTypes.func
+  dispatch: PropTypes.func,
+  handleToggleDelete: PropTypes.func,
+  handleToggleNotDelete: PropTypes.func,
 };
 
 export default connect()(CurrentSale);
