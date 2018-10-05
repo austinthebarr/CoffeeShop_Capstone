@@ -8,8 +8,9 @@ const InventoryReducer = (state = {}, action) => {
   case types.ADD_TO_INVENTORY:{
 
     let newInventoryItemEntered = {
-      itemName: action.Item,
-      quanity: action.quanity,
+      itemName: action.itemName,
+      quantity: parseFloat(action.quantity),
+      quantityType: action.quantityType,
     };
     newState = Object.assign({}, state, {[v4()]: newInventoryItemEntered});
     return newState;

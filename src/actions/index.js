@@ -22,8 +22,9 @@ export const deleteItem = (id) => ({
   id,
 });
 
-export const addToInventory = (item, quanity) => ({
+export const addToInventory = (itemName, quantity, quantityType) => ({
   type: types.ADD_TO_INVENTORY,
-  item,
-  quanity,
+  itemName,
+  quantity,
+  quantityType,
 });
