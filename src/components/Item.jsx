@@ -13,13 +13,15 @@ const Item = (props) => {
   return(
     <div className="card" style={cardInline}>
       <img className="card-img-top" src={stock}></img>
-      <h5 className="card-title">{props.drinkName}</h5>
+      <h5 className="card-title">{props.drinkName || props.itemName}{props.itemQuanity}</h5>
     </div>
   );
 };
 
 Item.propTypes = {
   drinkName: PropTypes.string,
+  itemName: PropTypes.string,
+  itemQuanity: PropTypes.string,
 };
 
 export default Item;
