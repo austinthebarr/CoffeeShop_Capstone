@@ -81,7 +81,8 @@ class Pos extends Component {
                 drinkList={this.props.drinksList}/> 
             </div> 
             <div className={this.showInventory()}>
-              <Inventory /> 
+              <Inventory 
+                inventoryList = {this.props.inventoryList}/> 
             </div> 
             <NavBar
               handleShowToggleSideBar = { this.onShowToggleSideBar}
@@ -105,13 +106,15 @@ class Pos extends Component {
 
 Pos.propTypes = {
   drinksList: PropTypes.object,
-  cartList: PropTypes.object
+  cartList: PropTypes.object,
+  inventoryList: PropTypes.object,
 };
 
 const mapStateToProps = state => {
   return {
     drinksList: state.drinks,
-    cartList: state.cart
+    cartList: state.cart,
+    inventoryList: state.inventory,
   };
 };
 

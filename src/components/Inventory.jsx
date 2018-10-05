@@ -8,8 +8,9 @@ const Inventory = (props) => {
     {Object.keys(props.inventoryList).map((item, i) => {
       return(
         <Item
-          item={props.inventoryList[item].itemName}
-          quanity={props.inventoryList[item].quanity}
+          itemName={props.inventoryList[item].itemName}
+          itemQuantity={props.inventoryList[item].quantity}
+          quantityType={props.inventoryList[item].quantityType}
           key={i}
         />
       );
@@ -17,7 +18,7 @@ const Inventory = (props) => {
   </div>);
 };
 Inventory.propTypes = {
-  inventoryList: PropTypes.object,
+  inventoryList: PropTypes.Object,
 };
 
 
